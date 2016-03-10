@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.OracleClient;
 using System.IO;
@@ -9,7 +9,7 @@ namespace Nautilus.DataGenerator
 {
     class Program
     {
-        private static string _outputDir = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "..\\..\\..\\..", "Nautilus.Data\\Nautilus.Data\\generated");
+        private static string _outputDir = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "..\\..\\..", "Nautilus.Data\\generated");
         private static string _connectionString = "Data Source=;User Id=;Password=;Unicode=True;";
         
 
@@ -79,7 +79,7 @@ namespace Nautilus.DataGenerator
 
                 while (reader.Read())
                 {
-                    var table = new Table(reader[0].ToString(), reader[0].ToString() + "_" + reader[1].ToString());
+                    var table = new Table(reader[0].ToString(), reader[0].ToString());
                     table.Columns = GetTableColumns(connection, reader[0].ToString());
                     tables.Add(table);
                     Console.WriteLine("Got user table {0} with {1} columns.", table.TypeName, table.Columns.Count);
