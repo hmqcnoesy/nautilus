@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61A6D0CD-2BE8-457B-9DEF-7727628051B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nautilus.Data</RootNamespace>
+    <AssemblyName>Nautilus.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="custom\EcmsPart.cs" />
+    <Compile Include="custom\OpsInstrument.cs" />
+    <Compile Include="custom\Sdg.cs" />
+    <Compile Include="custom\Test.cs" />
+    <Compile Include="custom\Aliquot.cs" />
+    <Compile Include="custom\Sample.cs" />
+    <Compile Include="generated\Address.cs" />
+    <Compile Include="generated\Aliquot.cs" />
+    <Compile Include="generated\Aliquot_Analyte.cs" />
+    <Compile Include="generated\Aliquot_Formulation.cs" />
+    <Compile Include="generated\Aliquot_Hazard.cs" />
+    <Compile Include="generated\Aliquot_Note.cs" />
+    <Compile Include="generated\Aliquot_Template.cs" />
+    <Compile Include="generated\Aliquot_Template_Field.cs" />
+    <Compile Include="generated\Aliquot_User_Env.cs" />
+    <Compile Include="generated\Aliquot_User_Ops.cs" />
+    <Compile Include="generated\Aliquot_User_Qa.cs" />
+    <Compile Include="generated\Analyte.cs" />
+    <Compile Include="generated\Analyte_Hazard.cs" />
+    <Compile Include="generated\Analyte_Stock.cs" />
+    <Compile Include="generated\Analyte_User_Env.cs" />
+    <Compile Include="generated\Analyte_User_Ops.cs" />
+    <Compile Include="generated\Analyte_User_Qa.cs" />
+    <Compile Include="generated\Aqc_Block.cs" />
+    <Compile Include="generated\Aqc_Chart.cs" />
+    <Compile Include="generated\Aqc_Chart_Rule.cs" />
+    <Compile Include="generated\Aqc_Failure.cs" />
+    <Compile Include="generated\Aqc_Limit.cs" />
+    <Compile Include="generated\Aqc_Point.cs" />
+    <Compile Include="generated\Aqc_Result.cs" />
+    <Compile Include="generated\Aqc_Rule.cs" />
+    <Compile Include="generated\Attachment.cs" />
+    <Compile Include="generated\Audit_Data.cs" />
+    <Compile Include="generated\Audit_Data_Blob.cs" />
+    <Compile Include="generated\Audit_Event.cs" />
+    <Compile Include="generated\Audit_Field.cs" />
+    <Compile Include="generated\Audit_Table.cs" />
+    <Compile Include="generated\Audit_Transaction.cs" />
+    <Compile Include="generated\Background.cs" />
+    <Compile Include="generated\Background_Log.cs" />
+    <Compile Include="generated\Background_Task_Type.cs" />
+    <Compile Include="generated\Calculation.cs" />
+    <Compile Include="generated\Calculation_Argument.cs" />
+    <Compile Include="generated\Calculation_Constant.cs" />
+    <Compile Include="generated\Calculation_Factor.cs" />
+    <Compile Include="generated\Calculation_Node.cs" />
+    <Compile Include="generated\Calculation_Node_Type.cs" />
+    <Compile Include="generated\Calendar_Day.cs" />
+    <Compile Include="generated\Calendar_Event.cs" />
+    <Compile Include="generated\Calendar_Event_Type.cs" />
+    <Compile Include="generated\Chemical.cs" />
+    <Compile Include="generated\Chemical_Hazard.cs" />
+    <Compile Include="generated\Chemical_User_Env.cs" />
+    <Compile Include="generated\Chemical_User_Ops.cs" />
+    <Compile Include="generated\Chemical_User_Qa.cs" />
+    <Compile Include="generated\Cherrypick_Link.cs" />
+    <Compile Include="generated\Cherrypick_Template.cs" />
+    <Compile Include="generated\Client.cs" />
+    <Compile Include="generated\Client_User_Env.cs" />
+    <Compile Include="generated\Client_User_Ops.cs" />
+    <Compile Include="generated\Client_User_Qa.cs" />
+    <Compile Include="generated\Cofa.cs" />
+    <Compile Include="generated\Cofa_Link.cs" />
+    <Compile Include="generated\Cofa_Template.cs" />
+    <Compile Include="generated\Cofa_Template_Operator.cs" />
+    <Compile Include="generated\Cofa_Template_Storage.cs" />
+    <Compile Include="generated\Command.cs" />
+    <Compile Include="generated\Config_Group.cs" />
+    <Compile Include="generated\Config_Item.cs" />
+    <Compile Include="generated\Config_Operator.cs" />
+    <Compile Include="generated\Config_Role.cs" />
+    <Compile Include="generated\Contact.cs" />
+    <Compile Include="generated\Container_Type.cs" />
+    <Compile Include="generated\Container_Type_User_Env.cs" />
+    <Compile Include="generated\Container_Type_User_Ops.cs" />
+    <Compile Include="generated\Container_Type_User_Qa.cs" />
+    <Compile Include="generated\Current_Session.cs" />
+    <Compile Include="generated\Destination.cs" />
+    <Compile Include="generated\Destination_List.cs" />
+    <Compile Include="generated\Destination_User_Env.cs" />
+    <Compile Include="generated\Destination_User_Ops.cs" />
+    <Compile Include="generated\Destination_User_Qa.cs" />
+    <Compile Include="generated\Entity_Colour.cs" />
+    <Compile Include="generated\Entity_Column.cs" />
+    <Compile Include="generated\Entity_Event.cs" />
+    <Compile Include="generated\Entity_Event_Link.cs" />
+    <Compile Include="generated\Entity_Event_Parameters.cs" />
+    <Compile Include="generated\Entity_Link.cs" />
+    <Compile Include="generated\Entity_Picture.cs" />
+    <Compile Include="generated\Entity_Specification.cs" />
+    <Compile Include="generated\Extension.cs" />
+    <Compile Include="generated\Filter.cs" />
+    <Compile Include="generated\Filter_Argument.cs" />
+    <Compile Include="generated\Folder.cs" />
+    <Compile Include="generated\Folder_Shortcut.cs" />
+    <Compile Include="generated\Grade.cs" />
+    <Compile Include="generated\Grade_Action.cs" />
+    <Compile Include="generated\Grid_Entity_Column.cs" />
+    <Compile Include="generated\Hazard.cs" />
+    <Compile Include="generated\Hazard_User_Env.cs" />
+    <Compile Include="generated\Hazard_User_Ops.cs" />
+    <Compile Include="generated\Hazard_User_Qa.cs" />
+    <Compile Include="generated\Initial_Aliquot_Hazard.cs" />
+    <Compile Include="generated\Inspection_Entry.cs" />
+    <Compile Include="generated\Inspection_Log.cs" />
+    <Compile Include="generated\Inspection_Plan.cs" />
+    <Compile Include="generated\Instrument.cs" />
+    <Compile Include="generated\Instrument_Alias_.cs" />
+    <Compile Include="generated\Instrument_Config.cs" />
+    <Compile Include="generated\Instrument_Control.cs" />
+    <Compile Include="generated\Instrument_File.cs" />
+    <Compile Include="generated\Instrument_Group.cs" />
+    <Compile Include="generated\Instrument_Group_Entry.cs" />
+    <Compile Include="generated\Instrument_Parameters.cs" />
+    <Compile Include="generated\Instrument_Part_List.cs" />
+    <Compile Include="generated\Instrument_Type.cs" />
+    <Compile Include="generated\Instrument_User_Env.cs" />
+    <Compile Include="generated\Instrument_User_Ops.cs" />
+    <Compile Include="generated\Instrument_User_Qa.cs" />
+    <Compile Include="generated\Lims_Blob.cs" />
+    <Compile Include="generated\Lims_Group.cs" />
+    <Compile Include="generated\Lims_Increment.cs" />
+    <Compile Include="generated\Lims_Role.cs" />
+    <Compile Include="generated\Lims_Session.cs" />
+    <Compile Include="generated\Location.cs" />
+    <Compile Include="generated\Location_Hazard.cs" />
+    <Compile Include="generated\Location_Type.cs" />
+    <Compile Include="generated\Location_Type_List.cs" />
+    <Compile Include="generated\Location_User_Env.cs" />
+    <Compile Include="generated\Location_User_Ops.cs" />
+    <Compile Include="generated\Location_User_Qa.cs" />
+    <Compile Include="generated\Menu.cs" />
+    <Compile Include="generated\Microsoftdtproperties.cs" />
+    <Compile Include="generated\Note_Entry.cs" />
+    <Compile Include="generated\Note_Phrases.cs" />
+    <Compile Include="generated\Operator.cs" />
+    <Compile Include="generated\Operator_Filter.cs" />
+    <Compile Include="generated\Operator_Filter_Argument.cs" />
+    <Compile Include="generated\Operator_Group.cs" />
+    <Compile Include="generated\Operator_Role.cs" />
+    <Compile Include="generated\Operator_User_Env.cs" />
+    <Compile Include="generated\Operator_User_Ops.cs" />
+    <Compile Include="generated\Operator_User_Qa.cs" />
+    <Compile Include="generated\Parsing_Command.cs" />
+    <Compile Include="generated\Pbcatcol.cs" />
+    <Compile Include="generated\Pbcatedt.cs" />
+    <Compile Include="generated\Pbcatfmt.cs" />
+    <Compile Include="generated\Pbcattbl.cs" />
+    <Compile Include="generated\Pbcatvld.cs" />
+    <Compile Include="generated\Phrase_Entry.cs" />
+    <Compile Include="generated\Phrase_Header.cs" />
+    <Compile Include="generated\Plate.cs" />
+    <Compile Include="generated\Plate_Action.cs" />
+    <Compile Include="generated\Plate_Action_Details.cs" />
+    <Compile Include="generated\Plate_Aliquot_Formulation.cs" />
+    <Compile Include="generated\Plate_Formulation.cs" />
+    <Compile Include="generated\Plate_Plan.cs" />
+    <Compile Include="generated\Plate_Plan_Step.cs" />
+    <Compile Include="generated\Plate_Plan_Template.cs" />
+    <Compile Include="generated\Plate_Plan_Template_Field.cs" />
+    <Compile Include="generated\Plate_Plan_User_Env.cs" />
+    <Compile Include="generated\Plate_Plan_User_Ops.cs" />
+    <Compile Include="generated\Plate_Plan_User_Qa.cs" />
+    <Compile Include="generated\Plate_Template.cs" />
+    <Compile Include="generated\Plate_Template_Dim.cs" />
+    <Compile Include="generated\Plate_Template_Entry.cs" />
+    <Compile Include="generated\Plate_Template_Field.cs" />
+    <Compile Include="generated\Plate_User_Env.cs" />
+    <Compile Include="generated\Plate_User_Ops.cs" />
+    <Compile Include="generated\Plate_User_Qa.cs" />
+    <Compile Include="generated\Product.cs" />
+    <Compile Include="generated\Product_User_Env.cs" />
+    <Compile Include="generated\Product_User_Ops.cs" />
+    <Compile Include="generated\Product_User_Qa.cs" />
+    <Compile Include="generated\Project.cs" />
+    <Compile Include="generated\Project_Study.cs" />
+    <Compile Include="generated\Project_User_Env.cs" />
+    <Compile Include="generated\Project_User_Ops.cs" />
+    <Compile Include="generated\Project_User_Qa.cs" />
+    <Compile Include="generated\Prompt_Definition.cs" />
+    <Compile Include="generated\Rack.cs" />
+    <Compile Include="generated\Rack_Aliquot.cs" />
+    <Compile Include="generated\Rack_Location.cs" />
+    <Compile Include="generated\Rack_Type.cs" />
+    <Compile Include="generated\Rack_Usage.cs" />
+    <Compile Include="generated\Rack_Usage_User_Env.cs" />
+    <Compile Include="generated\Rack_Usage_User_Ops.cs" />
+    <Compile Include="generated\Rack_Usage_User_Qa.cs" />
+    <Compile Include="generated\Rack_Worksheet.cs" />
+    <Compile Include="generated\Raw_Result.cs" />
+    <Compile Include="generated\Registry_Key.cs" />
+    <Compile Include="generated\Registry_Value.cs" />
+    <Compile Include="generated\Report.cs" />
+    <Compile Include="generated\Report_Argument.cs" />
+    <Compile Include="generated\Report_Argument_List.cs" />
+    <Compile Include="generated\Result.cs" />
+    <Compile Include="generated\Result_Alias_.cs" />
+    <Compile Include="generated\Result_Note.cs" />
+    <Compile Include="generated\Result_Template.cs" />
+    <Compile Include="generated\Result_Template_Field.cs" />
+    <Compile Include="generated\Result_Template_Limit.cs" />
+    <Compile Include="generated\Result_User_Env.cs" />
+    <Compile Include="generated\Result_User_Ops.cs" />
+    <Compile Include="generated\Result_User_Qa.cs" />
+    <Compile Include="generated\Sample.cs" />
+    <Compile Include="generated\Sample_Note.cs" />
+    <Compile Include="generated\Sample_Template.cs" />
+    <Compile Include="generated\Sample_Template_Field.cs" />
+    <Compile Include="generated\Sample_User_Env.cs" />
+    <Compile Include="generated\Sample_User_Ops.cs" />
+    <Compile Include="generated\Sample_User_Qa.cs" />
+    <Compile Include="generated\Samp_Tmp.cs" />
+    <Compile Include="generated\Schedule.cs" />
+    <Compile Include="generated\Schema_Archived_Entity.cs" />
+    <Compile Include="generated\Schema_Archived_Link.cs" />
+    <Compile Include="generated\Schema_Archived_Set.cs" />
+    <Compile Include="generated\Schema_Entity.cs" />
+    <Compile Include="generated\Schema_Entity_Extension.cs" />
+    <Compile Include="generated\Schema_Entity_Page.cs" />
+    <Compile Include="generated\Schema_Field.cs" />
+    <Compile Include="generated\Schema_Field_Prompt.cs" />
+    <Compile Include="generated\Schema_Prompt_Order.cs" />
+    <Compile Include="generated\Schema_Table.cs" />
+    <Compile Include="generated\Script.cs" />
+    <Compile Include="generated\Script_Command.cs" />
+    <Compile Include="generated\Sdg.cs" />
+    <Compile Include="generated\Sdg_Note.cs" />
+    <Compile Include="generated\Sdg_Template.cs" />
+    <Compile Include="generated\Sdg_Template_Field.cs" />
+    <Compile Include="generated\Sdg_User_Env.cs" />
+    <Compile Include="generated\Sdg_User_Ops.cs" />
+    <Compile Include="generated\Sdg_User_Qa.cs" />
+    <Compile Include="generated\Signature.cs" />
+    <Compile Include="generated\Signature_Blob.cs" />
+    <Compile Include="generated\Signature_Entry.cs" />
+    <Compile Include="generated\Signature_Template.cs" />
+    <Compile Include="generated\Signature_Template_Field.cs" />
+    <Compile Include="generated\Specification.cs" />
+    <Compile Include="generated\Specification_Action_Type.cs" />
+    <Compile Include="generated\Specification_Grade.cs" />
+    <Compile Include="generated\Specification_Item.cs" />
+    <Compile Include="generated\Specification_Item_Type.cs" />
+    <Compile Include="generated\Specification_User_Env.cs" />
+    <Compile Include="generated\Specification_User_Ops.cs" />
+    <Compile Include="generated\Specification_User_Qa.cs" />
+    <Compile Include="generated\Spec_Grade_Action.cs" />
+    <Compile Include="generated\Step.cs" />
+    <Compile Include="generated\Stock_Formulation.cs" />
+    <Compile Include="generated\Stock_Hazard.cs" />
+    <Compile Include="generated\Stock_Supplier.cs" />
+    <Compile Include="generated\Stock_Template.cs" />
+    <Compile Include="generated\Stock_Type.cs" />
+    <Compile Include="generated\Stored_Report_.cs" />
+    <Compile Include="generated\Stored_Report_List.cs" />
+    <Compile Include="generated\Study.cs" />
+    <Compile Include="generated\Study_Template.cs" />
+    <Compile Include="generated\Study_Template_Field.cs" />
+    <Compile Include="generated\Study_User_Env.cs" />
+    <Compile Include="generated\Study_User_Ops.cs" />
+    <Compile Include="generated\Study_User_Qa.cs" />
+    <Compile Include="generated\Supplier.cs" />
+    <Compile Include="generated\Supplier_User_Env.cs" />
+    <Compile Include="generated\Supplier_User_Ops.cs" />
+    <Compile Include="generated\Supplier_User_Qa.cs" />
+    <Compile Include="generated\Syntax.cs" />
+    <Compile Include="generated\Syntax_Item.cs" />
+    <Compile Include="generated\Syntax_Item_Type_.cs" />
+    <Compile Include="generated\Test.cs" />
+    <Compile Include="generated\Test_Alias_.cs" />
+    <Compile Include="generated\Test_Note.cs" />
+    <Compile Include="generated\Test_Specification.cs" />
+    <Compile Include="generated\Test_Template.cs" />
+    <Compile Include="generated\Test_Template_Field.cs" />
+    <Compile Include="generated\Test_Template_Hazard.cs" />
+    <Compile Include="generated\Test_User_Env.cs" />
+    <Compile Include="generated\Test_User_Ops.cs" />
+    <Compile Include="generated\Test_User_Qa.cs" />
+    <Compile Include="generated\Toolbar.cs" />
+    <Compile Include="generated\Toolbar_Item.cs" />
+    <Compile Include="generated\Unit.cs" />
+    <Compile Include="generated\Unit_Cache.cs" />
+    <Compile Include="generated\User_Profile.cs" />
+    <Compile Include="generated\U_Adcar_Transfer_Qa.cs" />
+    <Compile Include="generated\U_Adcar_Transfer_User_Qa.cs" />
+    <Compile Include="generated\U_Asbestos_Level_Env.cs" />
+    <Compile Include="generated\U_Asbestos_Level_User_Env.cs" />
+    <Compile Include="generated\U_Asbestos_Slides_Env.cs" />
+    <Compile Include="generated\U_Asbestos_Slides_User_Env.cs" />
+    <Compile Include="generated\U_Auto_Sample_Qa.cs" />
+    <Compile Include="generated\U_Auto_Sample_User_Qa.cs" />
+    <Compile Include="generated\U_Burn_Profile_Ops.cs" />
+    <Compile Include="generated\U_Burn_Profile_User_Ops.cs" />
+    <Compile Include="generated\U_Client_Test_Template_Ops.cs" />
+    <Compile Include="generated\U_Compatibility_Test_Qa.cs" />
+    <Compile Include="generated\U_Compatibility_Test_User_Qa.cs" />
+    <Compile Include="generated\U_Control_Material_Qa.cs" />
+    <Compile Include="generated\U_Control_Material_User_Qa.cs" />
+    <Compile Include="generated\U_Data_Transfers_Qa.cs" />
+    <Compile Include="generated\U_Data_Transfers_User_Qa.cs" />
+    <Compile Include="generated\U_Evaluation_Ops.cs" />
+    <Compile Include="generated\U_Evaluation_User_Ops.cs" />
+    <Compile Include="generated\U_Ext_Client_Info_Ops.cs" />
+    <Compile Include="generated\U_Ext_Client_Info_User_Ops.cs" />
+    <Compile Include="generated\U_Fp_Success_Ops.cs" />
+    <Compile Include="generated\U_Fp_Success_User_Ops.cs" />
+    <Compile Include="generated\U_Invoice_Detail_Env.cs" />
+    <Compile Include="generated\U_Invoice_Detail_User_Env.cs" />
+    <Compile Include="generated\U_Invoice_Header_Env.cs" />
+    <Compile Include="generated\U_Invoice_Header_User_Env.cs" />
+    <Compile Include="generated\U_Location_Info_Ops.cs" />
+    <Compile Include="generated\U_Location_Info_User_Ops.cs" />
+    <Compile Include="generated\U_Logbook_Entry_Ops.cs" />
+    <Compile Include="generated\U_Logbook_Entry_User_Ops.cs" />
+    <Compile Include="generated\U_Manufacturer_Qa.cs" />
+    <Compile Include="generated\U_Manufacturer_User_Qa.cs" />
+    <Compile Include="generated\U_Map_Ops.cs" />
+    <Compile Include="generated\U_Map_User_Ops.cs" />
+    <Compile Include="generated\U_Material_Info_Ops.cs" />
+    <Compile Include="generated\U_Material_Info_User_Ops.cs" />
+    <Compile Include="generated\U_Material_Shape_Ops.cs" />
+    <Compile Include="generated\U_Material_Shape_User_Ops.cs" />
+    <Compile Include="generated\U_Notification_Item_Qa.cs" />
+    <Compile Include="generated\U_Notification_Item_User_Qa.cs" />
+    <Compile Include="generated\U_Notification_Qa.cs" />
+    <Compile Include="generated\U_Notification_User_Qa.cs" />
+    <Compile Include="generated\U_Part_Numbers_Qa.cs" />
+    <Compile Include="generated\U_Part_Numbers_User_Qa.cs" />
+    <Compile Include="generated\U_Reporting_Service_Qa.cs" />
+    <Compile Include="generated\U_Reporting_Service_User_Qa.cs" />
+    <Compile Include="generated\U_Result_Limits_Qa.cs" />
+    <Compile Include="generated\U_Result_Limits_User_Qa.cs" />
+    <Compile Include="generated\U_Safetylimits_Ops.cs" />
+    <Compile Include="generated\U_Safetylimits_User_Ops.cs" />
+    <Compile Include="generated\U_Sampling_Container_Qa.cs" />
+    <Compile Include="generated\U_Sampling_Container_User_Qa.cs" />
+    <Compile Include="generated\U_Sampling_Info_Qa.cs" />
+    <Compile Include="generated\U_Sampling_Info_User_Qa.cs" />
+    <Compile Include="generated\U_Session_Metrics_Ops.cs" />
+    <Compile Include="generated\U_Session_Metrics_User_Ops.cs" />
+    <Compile Include="generated\U_Software_Qa.cs" />
+    <Compile Include="generated\U_Software_User_Qa.cs" />
+    <Compile Include="generated\U_Sqc_Review_Qa.cs" />
+    <Compile Include="generated\U_Sqc_Review_User_Qa.cs" />
+    <Compile Include="generated\U_Stat_Limit_Ops.cs" />
+    <Compile Include="generated\U_Stat_Limit_Qc_Ops.cs" />
+    <Compile Include="generated\U_Stat_Limit_Qc_User_Ops.cs" />
+    <Compile Include="generated\U_Stat_Limit_User_Ops.cs" />
+    <Compile Include="generated\U_Testprice_Parms_Env.cs" />
+    <Compile Include="generated\U_Testprice_Parms_User_Env.cs" />
+    <Compile Include="generated\U_Trace_Test_Qa.cs" />
+    <Compile Include="generated\U_Trace_Test_User_Qa.cs" />
+    <Compile Include="generated\U_Trace_Transfer_Qa.cs" />
+    <Compile Include="generated\U_Trace_Transfer_User_Qa.cs" />
+    <Compile Include="generated\U_Wp_Transfer_Data_Qa.cs" />
+    <Compile Include="generated\U_Wp_Transfer_Data_User_Qa.cs" />
+    <Compile Include="generated\U_Wp_Transfer_Qa.cs" />
+    <Compile Include="generated\U_Wp_Transfer_User_Qa.cs" />
+    <Compile Include="generated\Workflow.cs" />
+    <Compile Include="generated\Workflow_Node.cs" />
+    <Compile Include="generated\Workflow_Node_Event.cs" />
+    <Compile Include="generated\Workflow_Node_Follower.cs" />
+    <Compile Include="generated\Workflow_Node_Type.cs" />
+    <Compile Include="generated\Workflow_User_Env.cs" />
+    <Compile Include="generated\Workflow_User_Ops.cs" />
+    <Compile Include="generated\Workflow_User_Qa.cs" />
+    <Compile Include="generated\Worksheet.cs" />
+    <Compile Include="generated\Worksheet_Aliquot_Type.cs" />
+    <Compile Include="generated\Worksheet_Entry.cs" />
+    <Compile Include="generated\Worksheet_Format.cs" />
+    <Compile Include="generated\Worksheet_Format_Field.cs" />
+    <Compile Include="generated\Worksheet_Session_.cs" />
+    <Compile Include="generated\Worksheet_Template.cs" />
+    <Compile Include="generated\Worksheet_Template_Entry.cs" />
+    <Compile Include="generated\Worksheet_Template_Result.cs" />
+    <Compile Include="generated\Worksheet_Template_Session_.cs" />
+    <Compile Include="generated\Worksheet_Template_Test.cs" />
+    <Compile Include="generated\Worksheet_User_Env.cs" />
+    <Compile Include="generated\Worksheet_User_Ops.cs" />
+    <Compile Include="generated\Worksheet_User_Qa.cs" />
+    <Compile Include="generated\Workstation.cs" />
+    <Compile Include="generated\Workstation_Group.cs" />
+    <Compile Include="generated\Workstation_User_Env.cs" />
+    <Compile Include="generated\Workstation_User_Ops.cs" />
+    <Compile Include="generated\Workstation_User_Qa.cs" />
+    <Compile Include="generated\Xml_Transaction.cs" />
+    <Compile Include="generated\X_Compat_Master_User_Qa.cs" />
+    <Compile Include="NautilusEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
